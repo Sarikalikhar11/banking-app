@@ -122,7 +122,7 @@ const EmpRegister = () => {
                 <div>
                   <button
                     type="submit"
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                     onClick={register}
                   >
                     <Link

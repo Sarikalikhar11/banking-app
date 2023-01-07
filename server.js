@@ -74,6 +74,16 @@ app.post('/cust', async (req, res) => {
   });
 });
 
+app.get('/getcust', async (req, res) => {
+  try {
+    const custdata = await User.find();
+    console.log(custdata);
+    res.status(201).json(custdata);
+  } catch (error) {
+    res.status(404).json(error);
+  }
+});
+
 app.post('/customer', async (req, res) => {
   const { email, password } = req.body;
   User.findOne({ email: email }, (err, user) => {

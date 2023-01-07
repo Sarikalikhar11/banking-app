@@ -72,7 +72,7 @@ const Customer = ({ setLoginUser }) => {
                 </Link>
               </div>
               <div>
-                <button type="submit" class="btn btn-primary" onClick={login}>
+                <button type="submit" className="btn btn-primary" onClick={login}>
                   <Link
                     style={{ color: 'white', textDecoration: 'none' }}
                     to="/"

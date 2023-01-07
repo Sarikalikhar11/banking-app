@@ -20,8 +20,8 @@ const Employee = ({ setEmpLogin }) => {
   const emplogin = () => {
     axios.post('/employee', emp).then((res) => {
       alert(res.data.message);
-      setEmpLogin(res.data.emp);
-      navigate.push('/');
+      setEmpLogin(res.data.Emp);
+      navigate.push('/dashboard');
     });
   };
 
@@ -37,11 +37,10 @@ const Employee = ({ setEmpLogin }) => {
               </div>
               <div className="login_user">
                 <label for="">Employee ID</label>
-                <i class="fa-solid fa-user"></i>
                 <input
                   onChange={handleChange}
-                  type="text"
-                  name=""
+                  type="email"
+                  name="email"
                   value={emp.email}
                   placeholder="Type your employee ID"
                 />
@@ -50,12 +49,11 @@ const Employee = ({ setEmpLogin }) => {
                 <label for="">Password</label>
                 <input
                   onChange={handleChange}
-                  type="text"
-                  name=""
+                  type="password"
+                  name="password"
                   value={emp.password}
                   placeholder="Type your password"
                 />
-                <i class="fa-solid fa-key"></i>
               </div>
               <div>
                 <Link
@@ -68,10 +66,15 @@ const Employee = ({ setEmpLogin }) => {
               <div>
                 <button
                   type="submit"
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   onClick={emplogin}
                 >
-                  Submit
+                  <Link
+                    style={{ color: 'white', textDecoration: 'none' }}
+                    to="/dashboard"
+                  >
+                    Submit
+                  </Link>
                 </button>
               </div>
             </div>

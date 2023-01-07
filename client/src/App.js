@@ -19,6 +19,7 @@ import CreateAccount from './pages/CreateAccount';
 import Home from './pages/Home';
 import EmpRegister from './pages/EmpRegister';
 import CustRegister from './pages/CustRegister';
+import EmpDashboard from './pages/EmpDashboard';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="/customer" element={<Customer />} />
           <Route path="/emp" element={<EmpRegister />} />
           <Route path="/cust" element={<CustRegister />} />
+          <Route path="/dashboard" element={<EmpDashboard />} />
         </Routes>
         <Footer />
       </BrowserRouter>

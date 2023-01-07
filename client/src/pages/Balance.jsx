@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Balance = () => {
-  const [bal, setBal] = useState(10000);
+  const [bal, setBal] = useState(1000);
 
   const onBalance = (e) => {
     e.preventDefault();
